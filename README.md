@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Custom ESLint rules in Next.js
 
-First, run the development server:
+This is a mini-project focused on writing custom eslint rules to test for the presence of the property data-testid within the files of a particular directory in a next.js project.
+
+
+
+
+## Installation
+
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  npx create-next-app@latest
+  npm install eslint-plugin-eslint-rules --save-dev
+  cd datatest
 ```
+Switch to master branch as it has the latest code
+    
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- eslint-rules - folder that contains the custom eslint rule defined and the common export file for all the rules
+- check_data-testid.js - the custom eslint rule file
+- index.js - common export file for all the rules
+- .eslintrc.json - contains the file directories to be targeted and the rules to be operated on
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Screenshots
 
-## Learn More
+![App Screenshot](https://github.com/user-attachments/assets/1030be37-3c17-432b-a7ee-38982a879148)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Purpose
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This custom ESLint rule ensures that every JSX element in your code has a `data-testid` attribute. If a JSX element lacks the `data-testid` attribute, an error is reported, enforcing the use of this attribute for better test targeting.
 
-## Deploy on Vercel
+### How It Works
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- The rule checks each JSX opening tag (e.g., `<button>`, `<div>`) for the presence of the `data-testid` attribute.
+- If the attribute is missing, it triggers an ESLint error with a message indicating the tag name.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
