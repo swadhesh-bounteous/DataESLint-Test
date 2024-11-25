@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-# DataESLint-Test
-Provides a demo on creating custom rules to check for the presence of data-testid attribute's availability in html tags in a directory/ file in a Next.js project.
-=======
-
 # Custom ESLint rules in Next.js
 
 This is a mini-project focused on writing custom eslint rules to test for the presence of the property data-testid within the files of a particular directory in a next.js project.
-
-
 
 
 ## Installation
@@ -42,4 +35,3 @@ This custom ESLint rule ensures that every JSX element in your code has a `data-
 - The rule checks each JSX opening tag (e.g., `<button>`, `<div>`) for the presence of the `data-testid` attribute.
 - If the attribute is missing, it triggers an ESLint error with a message indicating the tag name.
 
->>>>>>> origin/master
