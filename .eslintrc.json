@@ -1,0 +1,17 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "overrides": [
+    {
+      "files": ["src/app/**/*.tsx", "src/app/**/*.ts"],  
+      "rules": {
+        "check_data-testid": "error"  
+      }
+    }
+  ]
+}
+
+// module.exports = {
+//   eslint: {
+//     dirs: ['pages', 'utils'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+//   },
+// }
