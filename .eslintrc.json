@@ -2,7 +2,7 @@
   "extends": ["next/core-web-vitals", "next/typescript"],
   "overrides": [
     {
-      "files": ["src/app/page.tsx"],  
+      "files": ["src/app/**/*.tsx", "src/app/**/*.ts"],  
       "rules": {
         "check_data-testid": "error"  
       }
